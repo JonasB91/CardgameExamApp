@@ -5,11 +5,19 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import kotlin.random.Random
+
+class Card( var value: Int,
+             var image: Int,
+             var suite: String){
+
+
+}
 
 class MainActivity : AppCompatActivity() {
     lateinit var textView: TextView
     lateinit var imageView: ImageView
-
+    var cardList = mutableListOf<Card>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,9 +34,22 @@ class MainActivity : AppCompatActivity() {
         buttonLow.setOnClickListener {
             buttonPressed()
         }
+
+            cardsLibrary()
+
     }
 
-// Hej Jonas
+    fun cardsLibrary(){
+        val card1 = Card(2,R.drawable.clubsoftwo,"Clubs of two")
+        val card2 = Card(3,R.drawable.heartofthree,"Hearts of three")
+        val card3 = Card(5,R.drawable.diamondoffive,"Five of diamonds")
+        val card4 = Card(7,R.drawable.spadeofseven,"Seven of spades")
+
+        cardList.add(card1)
+        cardList.add(card2)
+        cardList.add(card3)
+        cardList.add(card4)
+    }
 
     fun getImageResource(number: String): Int {
         return when (number) {
@@ -92,12 +113,15 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+
     fun buttonPressed() {
-        val randomN = (1..52).random().toString()
 
-        val image = getImageResource(randomN)
 
-        imageView.setImageResource(image)
+        val randomIndex = Random.nextInt(cardList.size);
+
+        val randomElement = cardList[randomIndex]
+
+        imageView.setImageResource(randomElement.image)
     }
 
 
