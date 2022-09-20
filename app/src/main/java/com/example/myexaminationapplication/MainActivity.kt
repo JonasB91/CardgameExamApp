@@ -2,11 +2,9 @@ package com.example.myexaminationapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     lateinit var textView: TextView
@@ -20,12 +18,17 @@ class MainActivity : AppCompatActivity() {
         textView = findViewById(R.id.questionView)
         imageView = findViewById(R.id.mainImage)
 
-
-        val button = findViewById<Button>(R.id.buttonPress)
-
-        button.text = "Press"
-
+        val buttonHigh = findViewById<Button>(R.id.buttonPressHigh)
+        buttonHigh.setOnClickListener {
+            buttonPressed()
+        }
+        val buttonLow = findViewById<Button>(R.id.buttonPressLow)
+        buttonLow.setOnClickListener {
+            buttonPressed()
+        }
     }
+
+
 
     fun getImageResource(number: String): Int {
         return when (number) {
@@ -88,15 +91,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun buttonPressed(view: View) {
+
+    fun buttonPressed() {
         val randomN = (1..52).random().toString()
 
         val image = getImageResource(randomN)
 
         imageView.setImageResource(image)
     }
-
-
 
 
 }
