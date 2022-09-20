@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
+// Hej Jonas
 
     fun getImageResource(number: String): Int {
         return when (number) {
