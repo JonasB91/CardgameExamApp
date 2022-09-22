@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var scoreView: TextView
     var cardList = mutableListOf<Card>()
     var score: Int = 0
-    var firstCard: Card? = null
-    var secondCard: Card? =null
+    var firstCard: Card = Card(1,R.drawable.clubsoface,"Clubs")
+    var secondCard: Card =Card(1,R.drawable.clubsoface,"Clubs")
     var scoreString: String =""
 
 
@@ -35,17 +35,21 @@ class MainActivity : AppCompatActivity() {
         val buttonHigh = findViewById<Button>(R.id.buttonPressHigh)
         buttonHigh.setOnClickListener {
             setNewrandomCard()
-            checkAnswerRight()
+            checkAnswerHigh()
+
         }
         val buttonLow = findViewById<Button>(R.id.buttonPressLow)
         buttonLow.setOnClickListener {
             setNewrandomCard()
-            checkAnswerleft()
+            checkAnswerLow()
+
 
         }
 
-            cardsLibrary()
 
+            cardsLibrary()
+            setNewrandomCard()
+            imageView.setImageResource(R.drawable.cardfrontside)
 
 
     }
@@ -172,7 +176,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun checkAnswerRight(): Boolean {
+    fun checkAnswerHigh() {
 
         setNewrandomCard()
 
@@ -180,52 +184,50 @@ class MainActivity : AppCompatActivity() {
         if (firstCard.value > secondCard.value) {
             score++
 
-             scoreString = score.toString()
-            scoreView.text = scoreString }
-//         else if (firstCardValue < secondCardValue){
-//            score --
-//        }
-        return firstCard.value > secondCard.value
+
+        } else if (firstCard.value < secondCard.value){
+            score --
+
+
+        }
+        scoreString = score.toString()
+        scoreView.text = scoreString
+
     }
 
 
-    fun checkAnswerleft(): Boolean {
+    fun checkAnswerLow()  {
 
-
-
+        setNewrandomCard()
 
         if (firstCard.value < secondCard.value) {
             score++
 
-             scoreString = score.toString()
-            scoreView.text = scoreString
-        }
-//        else if (firstCardValue > secondCardValue){
-//            score --
-//        }
 
-        return firstCard.value < secondCard.value
+        }
+        else if (firstCard.value > secondCard.value){
+            score --
+        }
+        scoreString = score.toString()
+        scoreView.text = scoreString
+
     }
 
 
 
 
 
-    fun setNewrandomCard(): Int {
+    fun setNewrandomCard() {
 
         secondCard = firstCard
         val randomIndex = Random.nextInt(cardList.size);
 
          firstCard = cardList[randomIndex]
 
-        //var firstCardValue = randomElement.value
-
-
-
 
         imageView.setImageResource(firstCard.image)
 
-        return firstCard.value
+
 
 
     }
