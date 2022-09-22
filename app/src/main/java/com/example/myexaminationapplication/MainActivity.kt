@@ -1,7 +1,9 @@
 package com.example.myexaminationapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -53,6 +55,9 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    
+
 
     fun cardsLibrary(){
         val card1 = Card(2,R.drawable.clubsoftwo,"Clubs of Two")
@@ -193,6 +198,19 @@ class MainActivity : AppCompatActivity() {
         scoreString = score.toString()
         scoreView.text = scoreString
 
+        if (score == 3) {
+            val scoreResult = scoreString
+            val intent = Intent(this, ActivityWinPage::class.java)
+            intent.putExtra("scoreResult", scoreResult)
+            startActivity(intent)
+
+        } else if (score == -3) {
+            val scoreResults = scoreString
+            val intent = Intent(this, ActivityLose::class.java)
+            intent.putExtra("scoreResults", scoreResults)
+            startActivity(intent)
+        }
+
     }
 
 
@@ -211,10 +229,22 @@ class MainActivity : AppCompatActivity() {
         scoreString = score.toString()
         scoreView.text = scoreString
 
+
+        if (score == 3) {
+            val scoreResult = scoreString
+            val intent = Intent(this, ActivityWinPage::class.java)
+            intent.putExtra("scoreResult", scoreResult)
+            startActivity(intent)
+
+        } else if (score == -3) {
+            val scoreResults = scoreString
+            val intent = Intent(this, ActivityLose::class.java)
+            intent.putExtra("scoreResults", scoreResults)
+            startActivity(intent)
+
+        }
+
     }
-
-
-
 
 
     fun setNewrandomCard() {

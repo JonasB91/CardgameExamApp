@@ -14,6 +14,15 @@
         android:theme="@style/Theme.MyExaminationApplication"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityLose"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityLosePage_Main"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityWinPage"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
