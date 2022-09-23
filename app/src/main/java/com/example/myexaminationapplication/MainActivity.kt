@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    //overridar för att reseta score efter man blivit skickat till ny aktivitet.
+
     override fun onRestart() {
         super.onRestart()
         score = 0
