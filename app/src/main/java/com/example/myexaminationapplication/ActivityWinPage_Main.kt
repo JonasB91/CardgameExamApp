@@ -12,6 +12,10 @@ class ActivityWinPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_win_page)
 
+        val backButton = findViewById<Button>(R.id.buttonBack)
+        backButton.setOnClickListener {
+            finish()
+        }
 
 
 

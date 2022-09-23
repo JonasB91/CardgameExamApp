@@ -36,87 +36,92 @@ class MainActivity : AppCompatActivity() {
 
         val buttonHigh = findViewById<Button>(R.id.buttonPressHigh)
         buttonHigh.setOnClickListener {
+
             setNewrandomCard()
             checkAnswerHigh()
 
         }
         val buttonLow = findViewById<Button>(R.id.buttonPressLow)
         buttonLow.setOnClickListener {
+
             setNewrandomCard()
             checkAnswerLow()
 
-
         }
 
-
             cardsLibrary()
+            cardList.shuffle()
             setNewrandomCard()
             imageView.setImageResource(R.drawable.cardfrontside)
 
-
     }
 
-    
-
+    //overridar för att reseta score efter man blivit skickat till ny aktivitet.
+    override fun onRestart() {
+        super.onRestart()
+        score = 0
+        scoreString = score.toString()
+        scoreView.text = scoreString
+    }
 
     fun cardsLibrary(){
-        val card1 = Card(2,R.drawable.clubsoftwo,"Clubs of Two")
-        val card2 = Card(3,R.drawable.clubsofthree,"Clubs of Three")
-        val card3 = Card(4,R.drawable.clubsoffour,"Clubs of Four")
-        val card4 = Card(5,R.drawable.clubsoffive,"Clubs of Five")
-        val card5 = Card(6,R.drawable.clubsofsix,"Clubs of Six")
-        val card6 = Card(7,R.drawable.clubsofseven,"Clubs of Seven")
-        val card7 = Card(8,R.drawable.clubsofeight,"Clubs of Eight")
-        val card8 = Card(9,R.drawable.clubsofnine,"Clubs of Nine")
-        val card9 = Card(10,R.drawable.clubsoften,"Clubs of Ten")
-        val card10 = Card(11,R.drawable.clubsofjack,"Clubs of Jack")
-        val card11 = Card(12,R.drawable.clubsofqueen,"Clubs of Queen")
-        val card12 = Card(13,R.drawable.clubsofking,"Clubs of King")
-        val card13 = Card(1,R.drawable.clubsoface,"Clubs of Ace")
+        val card1 = Card(2,R.drawable.clubsoftwo,"Two of Clubs")
+        val card2 = Card(3,R.drawable.clubsofthree,"Three of Clubs")
+        val card3 = Card(4,R.drawable.clubsoffour,"Four of Clubs")
+        val card4 = Card(5,R.drawable.clubsoffive,"Five of Clubs")
+        val card5 = Card(6,R.drawable.clubsofsix,"Six of Clubs")
+        val card6 = Card(7,R.drawable.clubsofseven,"Seven of Clubs")
+        val card7 = Card(8,R.drawable.clubsofeight,"Eight of Clubs")
+        val card8 = Card(9,R.drawable.clubsofnine,"Nine of Clubs")
+        val card9 = Card(10,R.drawable.clubsoften,"Ten of Clubs")
+        val card10 = Card(11,R.drawable.clubsofjack,"Jack of Clubs")
+        val card11 = Card(12,R.drawable.clubsofqueen,"Queen of Clubs")
+        val card12 = Card(13,R.drawable.clubsofking,"King of Clubs")
+        val card13 = Card(1,R.drawable.clubsoface,"Ace of Clubs")
 
         // card13 är Ace, vi bör kolla om vi ska ha den som både värde 1 & 13??
 
-        val card14 = Card(2,R.drawable.spadeoftwo,"Spade of Two")
-        val card15 = Card(3,R.drawable.spadeofthree,"Spade of Three")
-        val card16 = Card(4,R.drawable.spadeoffour,"Spade of Four")
-        val card17 = Card(5,R.drawable.spadeoffive,"Spade of Five")
-        val card18 = Card(6,R.drawable.spadeofsix,"Spade of Six")
-        val card19 = Card(7,R.drawable.spadeofseven,"Spade of Seven")
-        val card20 = Card(8,R.drawable.spadeofeight,"Spade of Eight")
-        val card21 = Card(9,R.drawable.spadeofnine,"Spade of Nine")
-        val card22 = Card(10,R.drawable.spadeoften,"Spade of Ten")
-        val card23 = Card(11,R.drawable.spadeofjack,"Spade of Jack")
-        val card24 = Card(12,R.drawable.spadeofqueen,"Spade of Queen")
-        val card25 = Card(13,R.drawable.spadeofking,"Spade of King")
-        val card26 = Card(1,R.drawable.spadeoface,"Spade of Ace")
+        val card14 = Card(2,R.drawable.spadeoftwo,"Two of Spades")
+        val card15 = Card(3,R.drawable.spadeofthree,"Three of Spades")
+        val card16 = Card(4,R.drawable.spadeoffour,"Four of Spades")
+        val card17 = Card(5,R.drawable.spadeoffive,"Five of Spades")
+        val card18 = Card(6,R.drawable.spadeofsix,"Six of Spades")
+        val card19 = Card(7,R.drawable.spadeofseven,"Seven of Spades")
+        val card20 = Card(8,R.drawable.spadeofeight,"Eight of Spades")
+        val card21 = Card(9,R.drawable.spadeofnine,"Nine of Spades")
+        val card22 = Card(10,R.drawable.spadeoften,"Ten of Spades")
+        val card23 = Card(11,R.drawable.spadeofjack,"Jack of Spades")
+        val card24 = Card(12,R.drawable.spadeofqueen,"Queen of Spades")
+        val card25 = Card(13,R.drawable.spadeofking,"King of Spades")
+        val card26 = Card(1,R.drawable.spadeoface,"Ace of Spades")
 
-        val card27 = Card(2,R.drawable.heartoftwo,"Heart of Two")
-        val card28 = Card(3,R.drawable.heartofthree,"Heart of Three")
-        val card29 = Card(4,R.drawable.heartoffour,"Heart of Four")
-        val card30 = Card(5,R.drawable.heartoffive,"Heart of Five")
-        val card31 = Card(6,R.drawable.heartofsix,"Heart of Six")
-        val card32 = Card(7,R.drawable.heartofseven,"Heart of Seven")
-        val card33 = Card(8,R.drawable.heartofeight,"Heart of Eight")
-        val card34 = Card(9,R.drawable.heartofnine,"Heart of Nine")
-        val card35 = Card(10,R.drawable.heartoften,"Heart of Ten")
-        val card36 = Card(11,R.drawable.heartofjack,"Heart of Jack")
-        val card37 = Card(12,R.drawable.heartofqueen,"Heart of Queen")
-        val card38 = Card(13,R.drawable.heartofking,"Heart of King")
-        val card39 = Card(1,R.drawable.heartoface,"Heart of Ace")
+        val card27 = Card(2,R.drawable.heartoftwo,"Two of Hearts")
+        val card28 = Card(3,R.drawable.heartofthree,"Three of Hearts")
+        val card29 = Card(4,R.drawable.heartoffour,"Four of Hearts")
+        val card30 = Card(5,R.drawable.heartoffive,"Five of Hearts")
+        val card31 = Card(6,R.drawable.heartofsix,"Six of Hearts")
+        val card32 = Card(7,R.drawable.heartofseven,"Seven of Hearts")
+        val card33 = Card(8,R.drawable.heartofeight,"Eight of Hearts")
+        val card34 = Card(9,R.drawable.heartofnine,"Nine of Hearts")
+        val card35 = Card(10,R.drawable.heartoften,"Ten of Hearts")
+        val card36 = Card(11,R.drawable.heartofjack,"Jack of Hearts")
+        val card37 = Card(12,R.drawable.heartofqueen,"Queen of Hearts")
+        val card38 = Card(13,R.drawable.heartofking,"King of Hearts")
+        val card39 = Card(1,R.drawable.heartoface,"Ace of Hearts")
 
-        val card40 = Card(2,R.drawable.diamondoftwo,"Diamond of Two")
-        val card41 = Card(3,R.drawable.diamondofthree,"Diamond of Three")
-        val card42 = Card(4,R.drawable.diamondoffour,"Diamond of Four")
-        val card43 = Card(5,R.drawable.diamondoffive,"Diamond of Five")
-        val card44 = Card(6,R.drawable.diamondofsix,"Diamond of Six")
-        val card45 = Card(7,R.drawable.diamondofseven,"Diamond of Seven")
-        val card46 = Card(8,R.drawable.diamondofeight,"Diamond of Eight")
-        val card47 = Card(9,R.drawable.diamondofnine,"Diamond of Nine")
-        val card48 = Card(10,R.drawable.diamondoften,"Diamond of Ten")
-        val card49 = Card(11,R.drawable.diamondofjack,"Diamond of Jack")
-        val card50 = Card(12,R.drawable.diamondofqueen,"Diamond of Queen")
-        val card51 = Card(13,R.drawable.diamondofking,"Diamond of King")
-        val card52 = Card(1,R.drawable.diamondoface,"Diamond of Ace")
+        val card40 = Card(2,R.drawable.diamondoftwo,"Two of Diamonds")
+        val card41 = Card(3,R.drawable.diamondofthree,"Three of Diamonds")
+        val card42 = Card(4,R.drawable.diamondoffour,"Four of Diamonds")
+        val card43 = Card(5,R.drawable.diamondoffive,"Five of Diamonds")
+        val card44 = Card(6,R.drawable.diamondofsix,"Six of Diamonds")
+        val card45 = Card(7,R.drawable.diamondofseven,"Seven of Diamonds")
+        val card46 = Card(8,R.drawable.diamondofeight,"Eight of Diamonds")
+        val card47 = Card(9,R.drawable.diamondofnine,"Nine of Diamonds")
+        val card48 = Card(10,R.drawable.diamondoften,"Ten of Diamonds")
+        val card49 = Card(11,R.drawable.diamondofjack,"Jack of Diamonds")
+        val card50 = Card(12,R.drawable.diamondofqueen,"Queen of Diamonds")
+        val card51 = Card(13,R.drawable.diamondofking,"King of Diamonds")
+        val card52 = Card(1,R.drawable.diamondoface,"Ace of Diamonds")
 
         cardList.add(card1)
         cardList.add(card2)
@@ -182,18 +187,16 @@ class MainActivity : AppCompatActivity() {
 
 
     fun checkAnswerHigh() {
-
         setNewrandomCard()
-
 
         if (firstCard.value > secondCard.value) {
             score++
+        }
+        else if (firstCard.value < secondCard.value){
+            score = 0
 
-
-        } else if (firstCard.value < secondCard.value){
-            score --
-
-
+        }  else if (firstCard.value == secondCard.value) {
+            score +2
         }
         scoreString = score.toString()
         scoreView.text = scoreString
@@ -204,31 +207,29 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("scoreResult", scoreResult)
             startActivity(intent)
 
-        } else if (score == -3) {
-            val scoreResults = scoreString
-            val intent = Intent(this, ActivityLose::class.java)
-            intent.putExtra("scoreResults", scoreResults)
-            startActivity(intent)
         }
+//        else if (score == -3) {
+//            val scoreResults = scoreString
+//            val intent = Intent(this, ActivityLose::class.java)
+//            intent.putExtra("scoreResults", scoreResults)
+//            startActivity(intent)
+//        }
 
     }
 
-
     fun checkAnswerLow()  {
-
         setNewrandomCard()
 
         if (firstCard.value < secondCard.value) {
             score++
-
-
         }
-        else if (firstCard.value > secondCard.value){
-            score --
+        else if (firstCard.value >= secondCard.value){
+            score = 0
+        } else if (firstCard.value == secondCard.value) {
+            score +2
         }
         scoreString = score.toString()
         scoreView.text = scoreString
-
 
         if (score == 3) {
             val scoreResult = scoreString
@@ -236,33 +237,29 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("scoreResult", scoreResult)
             startActivity(intent)
 
-        } else if (score == -3) {
-            val scoreResults = scoreString
-            val intent = Intent(this, ActivityLose::class.java)
-            intent.putExtra("scoreResults", scoreResults)
-            startActivity(intent)
-
         }
+//        else if (score == -3) {
+//            val scoreResults = scoreString
+//            val intent = Intent(this, ActivityLose::class.java)
+//            intent.putExtra("scoreResults", scoreResults)
+//            startActivity(intent)
+//
+//        }
 
     }
 
-
     fun setNewrandomCard() {
-
         secondCard = firstCard
         val randomIndex = Random.nextInt(cardList.size);
 
-         firstCard = cardList[randomIndex]
-
+        firstCard = cardList[randomIndex]
 
         imageView.setImageResource(firstCard.image)
-
-
-
-
     }
+
+
+
 
 
 }
 
-// Hej oskar jag har skapat en ny gren
