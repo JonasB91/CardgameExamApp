@@ -36,14 +36,12 @@ class MainActivity : AppCompatActivity() {
 
         val buttonHigh = findViewById<Button>(R.id.buttonPressHigh)
         buttonHigh.setOnClickListener {
-
             setNewrandomCard()
             checkAnswerHigh()
 
         }
         val buttonLow = findViewById<Button>(R.id.buttonPressLow)
         buttonLow.setOnClickListener {
-
             setNewrandomCard()
             checkAnswerLow()
 
@@ -187,7 +185,6 @@ class MainActivity : AppCompatActivity() {
 
 
     fun checkAnswerHigh() {
-        setNewrandomCard()
 
         if (firstCard.value > secondCard.value) {
             score++
@@ -195,13 +192,12 @@ class MainActivity : AppCompatActivity() {
         else if (firstCard.value < secondCard.value){
             score = 0
 
-        }  else if (firstCard.value == secondCard.value) {
-            score +2
         }
+
         scoreString = score.toString()
         scoreView.text = scoreString
 
-        if (score == 3) {
+        if (score == 12) {
             val scoreResult = scoreString
             val intent = Intent(this, ActivityWinPage::class.java)
             intent.putExtra("scoreResult", scoreResult)
@@ -218,20 +214,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun checkAnswerLow()  {
-        setNewrandomCard()
+
 
         if (firstCard.value < secondCard.value) {
             score++
         }
         else if (firstCard.value >= secondCard.value){
             score = 0
-        } else if (firstCard.value == secondCard.value) {
-            score +2
         }
+
         scoreString = score.toString()
         scoreView.text = scoreString
 
-        if (score == 3) {
+        if (score == 12) {
             val scoreResult = scoreString
             val intent = Intent(this, ActivityWinPage::class.java)
             intent.putExtra("scoreResult", scoreResult)
