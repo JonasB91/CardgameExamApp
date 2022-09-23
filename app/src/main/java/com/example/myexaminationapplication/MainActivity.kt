@@ -56,8 +56,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    
 
+    override fun onRestart() {
+        super.onRestart()
+        score = 0
+        scoreString = score.toString()
+        scoreView.text = scoreString
+    }
 
     fun cardsLibrary(){
         val card1 = Card(2,R.drawable.clubsoftwo,"Clubs of Two")
