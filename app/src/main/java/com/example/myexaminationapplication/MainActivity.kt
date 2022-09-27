@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var textView: TextView
     lateinit var imageView: ImageView
     lateinit var scoreView: TextView
+
     var cardList = mutableListOf<Card>()
     var score: Int = 0
     var firstCard: Card = Card(1,R.drawable.clubsoface,"Clubs")
@@ -197,7 +198,7 @@ class MainActivity : AppCompatActivity() {
         scoreString = score.toString()
         scoreView.text = scoreString
 
-        if (score == 12) {
+        if (score == 3) {
             val scoreResult = scoreString
             val intent = Intent(this, ActivityWinPage::class.java)
             intent.putExtra("scoreResult", scoreResult)
@@ -226,7 +227,7 @@ class MainActivity : AppCompatActivity() {
         scoreString = score.toString()
         scoreView.text = scoreString
 
-        if (score == 12) {
+        if (score == 3) {
             val scoreResult = scoreString
             val intent = Intent(this, ActivityWinPage::class.java)
             intent.putExtra("scoreResult", scoreResult)
@@ -251,7 +252,6 @@ class MainActivity : AppCompatActivity() {
 
         imageView.setImageResource(firstCard.image)
     }
-
 
 
 
