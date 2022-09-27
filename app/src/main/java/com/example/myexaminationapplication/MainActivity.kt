@@ -14,7 +14,9 @@ class MainActivity : AppCompatActivity() {
     lateinit var textView: TextView
     lateinit var imageView: ImageView
     lateinit var scoreView: TextView
+
     val cardList =CardsList().cardList
+
     var score: Int = 0
     var firstCard: Card = Card(1,R.drawable.clubsoface,"Clubs")
     var secondCard: Card =Card(1,R.drawable.clubsoface,"Clubs")
@@ -120,7 +122,6 @@ class MainActivity : AppCompatActivity() {
         imageView.setImageResource(firstCard.image)
 
     }
-
 
 
 
