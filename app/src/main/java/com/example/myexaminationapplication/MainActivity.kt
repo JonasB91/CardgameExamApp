@@ -15,19 +15,19 @@ class MainActivity : AppCompatActivity() {
     lateinit var imageView: ImageView
     lateinit var scoreView: TextView
 
-    val cardList =CardsList().cardList
+    val cardList = CardsList().cardList
 
     var score: Int = 0
-    var firstCard: Card = Card(1,R.drawable.clubsoface,"Clubs")
-    var secondCard: Card = Card(1,R.drawable.clubsoface,"Clubs")
-    var scoreString: String =""
+    var firstCard: Card = Card(1, R.drawable.clubsoface, "Clubs")
+    var secondCard: Card = Card(1, R.drawable.clubsoface, "Clubs")
+    var scoreString: String = ""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        scoreView =findViewById(R.id.textViewScore)
-        textView = findViewById(R.id.questionView)
+        scoreView = findViewById(R.id.textViewScore)
+        //textView = findViewById(R.id.questionView)
         imageView = findViewById(R.id.mainImage)
 
         val buttonHigh = findViewById<Button>(R.id.buttonPressHigh)
@@ -44,9 +44,9 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-            //cardList.shuffle()
-            setNewrandomCard()
-            imageView.setImageResource(R.drawable.cardfrontside)
+        cardList.shuffle()
+        setNewrandomCard()
+        imageView.setImageResource(R.drawable.cardfrontside)
 
     }
 
@@ -59,19 +59,15 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
-
     fun checkAnswerHigh() {
 
         if (firstCard.value > secondCard.value) {
             score++
-        }
-        else if (firstCard.value < secondCard.value){
+        } else if (firstCard.value < secondCard.value) {
             score = 0
 
-        }
-        else if (firstCard.value==secondCard.value){
-            score+2
+        } else if (firstCard.value == secondCard.value) {
+            score + 2
         }
 
         scoreString = score.toString()
@@ -82,21 +78,18 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ActivityWinPage::class.java)
             intent.putExtra("scoreResult", scoreResult)
             startActivity(intent)
-
         }
 
     }
 
-    fun checkAnswerLow()  {
-
+    fun checkAnswerLow() {
 
         if (firstCard.value < secondCard.value) {
             score++
-        }
-        else if (firstCard.value >= secondCard.value){
+        } else if (firstCard.value >= secondCard.value) {
             score = 0
-        } else if (firstCard.value==secondCard.value){
-            score+2
+        } else if (firstCard.value == secondCard.value) {
+            score + 2
         }
 
         scoreString = score.toString()
@@ -109,7 +102,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
-
 
     }
 
@@ -122,9 +114,5 @@ class MainActivity : AppCompatActivity() {
         imageView.setImageResource(firstCard.image)
 
     }
-
-
-
-
 }
 
