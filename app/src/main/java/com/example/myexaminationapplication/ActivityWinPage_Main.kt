@@ -41,27 +41,20 @@ class ActivityWinPage : AppCompatActivity() {
     fun moveObjectDownDirection() = (2500).toFloat()
     fun moveObjectDown() {
 
-        val animation = fallingCard.animate().translationY(moveObjectDownDirection())
-        animation.duration = 8500
-
-//        animation.withEndAction {
-//            fallingCard.x = 0f
-//            fallingCard.y = 0f
-//        }
-       // fallingCard.animate()
-         //   .translationY(moveObjectDownDirection()).duration = 8500
+        fallingCard.animate()
+        .translationY(moveObjectDownDirection()).duration = 3000
         fallingCardTwo.animate()
-            .translationY(moveObjectDownDirection()).duration = 8500
+            .translationY(moveObjectDownDirection()).duration = 4000
         fallingCardThree.animate()
-            .translationY(moveObjectDownDirection()).duration = 9000
+            .translationY(moveObjectDownDirection()).duration = 3200
         fallingCardFour.animate()
-            .translationY(moveObjectDownDirection()).duration = 9500
+            .translationY(moveObjectDownDirection()).duration = 3400
         fallingCardFive.animate()
-            .translationY(moveObjectDownDirection()).duration = 8000
+            .translationY(moveObjectDownDirection()).duration = 3600
         fallingCardSix.animate()
-            .translationY(moveObjectDownDirection()).duration = 7000
+            .translationY(moveObjectDownDirection()).duration = 3800
         fallingCardSeven.animate()
-            .translationY(moveObjectDownDirection()).duration = 7500
+            .translationY(moveObjectDownDirection()).duration = 4200
 
 
 

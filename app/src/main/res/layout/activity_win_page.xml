@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/winnerpicture"
+    android:background="@drawable/big_win_picture"
     tools:context=".ActivityWinPage">
 
     <TextView
@@ -13,20 +13,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="160dp"
         android:text="You Won!!!"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="65sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.965" />
+        app:layout_constraintVertical_bias="0.903" />
 
     <Button
         android:id="@+id/buttonBack"
         android:layout_width="241dp"
         android:layout_height="57dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="44dp"
         android:text="Play Again!"
+        android:backgroundTint="#cc6666"
+        android:textColor="#100c08"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,11 +38,11 @@
         android:id="@+id/fallingCardOne"
         android:layout_width="63dp"
         android:layout_height="75dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="116dp"
         android:rotationX="2"
         android:rotationY="2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/clubsoface" />
@@ -51,7 +53,7 @@
         android:layout_height="86dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.344"
+        app:layout_constraintHorizontal_bias="0.301"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/heartoface" />
@@ -60,9 +62,9 @@
         android:id="@+id/fallingCardThree"
         android:layout_width="64dp"
         android:layout_height="83dp"
-        android:layout_marginTop="196dp"
+        android:layout_marginTop="320dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/diamondoface" />
@@ -82,9 +84,9 @@
         android:id="@+id/fallingCardFive"
         android:layout_width="83dp"
         android:layout_height="90dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="192dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintHorizontal_bias="0.914"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/clubsofeight" />
@@ -93,9 +95,9 @@
         android:id="@+id/fallingCardSix"
         android:layout_width="66dp"
         android:layout_height="100dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="136dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/diamondofqueen" />
@@ -104,9 +106,9 @@
         android:id="@+id/fallingCardSeven"
         android:layout_width="62dp"
         android:layout_height="82dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="260dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintHorizontal_bias="0.243"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/heartofking" />
