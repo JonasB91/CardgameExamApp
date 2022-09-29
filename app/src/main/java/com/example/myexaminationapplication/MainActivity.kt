@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     var score: Int = 0
     var firstCard: Card = Card(1,R.drawable.clubsoface,"Clubs")
-    var secondCard: Card =Card(1,R.drawable.clubsoface,"Clubs")
+    var secondCard: Card = Card(1,R.drawable.clubsoface,"Clubs")
     var scoreString: String =""
 
 

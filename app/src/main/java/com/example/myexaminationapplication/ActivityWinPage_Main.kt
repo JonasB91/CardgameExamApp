@@ -1,5 +1,6 @@
 package com.example.myexaminationapplication
 
+import android.animation.Animator
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -39,20 +40,28 @@ class ActivityWinPage : AppCompatActivity() {
 
     fun moveObjectDownDirection() = (2500).toFloat()
     fun moveObjectDown() {
-        fallingCard.animate()
-            .translationY(moveObjectDownDirection()).duration = 8500
+
+        val animation = fallingCard.animate().translationY(moveObjectDownDirection())
+        animation.duration = 8500
+
+//        animation.withEndAction {
+//            fallingCard.x = 0f
+//            fallingCard.y = 0f
+//        }
+       // fallingCard.animate()
+         //   .translationY(moveObjectDownDirection()).duration = 8500
         fallingCardTwo.animate()
-            .translationY(moveObjectDownDirection()).duration = 10000
+            .translationY(moveObjectDownDirection()).duration = 8500
         fallingCardThree.animate()
-            .translationY(moveObjectDownDirection()).duration = 9800
-        fallingCardFour.animate()
             .translationY(moveObjectDownDirection()).duration = 9000
-        fallingCardFive.animate()
+        fallingCardFour.animate()
             .translationY(moveObjectDownDirection()).duration = 9500
-        fallingCardSix.animate()
-            .translationY(moveObjectDownDirection()).duration = 11500
-        fallingCardSeven.animate()
+        fallingCardFive.animate()
             .translationY(moveObjectDownDirection()).duration = 8000
+        fallingCardSix.animate()
+            .translationY(moveObjectDownDirection()).duration = 7000
+        fallingCardSeven.animate()
+            .translationY(moveObjectDownDirection()).duration = 7500
 
 
 
