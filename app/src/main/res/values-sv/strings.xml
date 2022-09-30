@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyExaminationApplication</string>
+    <string name="textViewWin">Du vann!!!</string>
+    <string name="buttonBack">Spela igen!</string>
+    <string name="textView">Spela</string>
+    <string name="textViewScore">Poäng</string>
+    <string name="TextViewAnswer">Få tre poäng i rad för vinst!</string>
+    <string name="bonusTextView">Bonus: Samma kort värde = x2 Poäng</string>
+    <string name="buttonPressLow">Lägre</string>
+    <string name="buttonPressHigh">Högre</string>
+</resources>
