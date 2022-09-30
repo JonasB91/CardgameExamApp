@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var imageView: ImageView
     lateinit var scoreView: TextView
 
-    val cardList =CardsList().cardList
+    val cardList = CardsList().cardList
 
     var score: Int = 0
     var firstCard: Card = Card(1,R.drawable.clubsoface,"Clubs")
@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity() {
         buttonLow.setOnClickListener {
             setNewrandomCard()
             checkAnswerLow()
-
         }
 
 
@@ -115,9 +114,9 @@ class MainActivity : AppCompatActivity() {
 
     fun setNewrandomCard() {
         secondCard = firstCard
-        val randomIndex = Random.nextInt(cardList.size);
 
-        firstCard = cardList[randomIndex]
+
+        firstCard = CardsList().sorting()
 
         imageView.setImageResource(firstCard.image)
 
