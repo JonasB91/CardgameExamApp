@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity() {
         buttonLow.setOnClickListener {
             setNewrandomCard()
             checkAnswerLow()
-
         }
 
 
@@ -107,9 +106,9 @@ class MainActivity : AppCompatActivity() {
 
     fun setNewrandomCard() {
         secondCard = firstCard
-        val randomIndex = Random.nextInt(cardList.size);
 
-        firstCard = cardList[randomIndex]
+
+        firstCard = CardsList().sorting()
 
         imageView.setImageResource(firstCard.image)
 
