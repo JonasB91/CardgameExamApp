@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">MyExaminationApplication</string>
+    <string name="textViewWin">You Won!!!</string>
+    <string name="buttonBack">PLAY AGAIN!</string>
+    <string name="textView">Play</string>
+    <string name="textViewScore">Score</string>
+    <string name="TextViewAnswer">Reach high score 3 in a Row!</string>
+    <string name="bonusTextView">Bonus: Same card = x2 Score</string>
+    <string name="buttonPressLow">Low</string>
+    <string name="buttonPressHigh">High</string>
 </resources>

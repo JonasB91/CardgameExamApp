@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="160dp"
-        android:text="You Won!!!"
+        android:text="@string/textViewWin"
         android:textColor="#000000"
         android:textSize="65sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonBack"
@@ -23,13 +23,6 @@
 
     <Button
         android:id="@+id/buttonBack"
-        android:layout_width="180dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginBottom="40dp"
-        android:backgroundTint="#cc6666"
-        android:text="Play Again!"
         android:textColor="#100c08"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
