@@ -23,15 +23,17 @@
 
     <Button
         android:id="@+id/buttonBack"
-        android:layout_width="241dp"
-        android:layout_height="57dp"
-        android:layout_marginBottom="44dp"
-        android:text="Play Again!"
+        android:layout_width="180dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="40dp"
         android:backgroundTint="#cc6666"
+        android:text="Play Again!"
         android:textColor="#100c08"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scoreButton"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
@@ -112,4 +114,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/heartofking" />
+
+    <Button
+        android:id="@+id/scoreButton"
+        android:layout_width="180dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="#cc6666"
+        android:text="Highscore"
+        android:textColor="#100c08"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWin" />
 </androidx.constraintlayout.widget.ConstraintLayout>

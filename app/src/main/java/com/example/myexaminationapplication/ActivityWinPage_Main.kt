@@ -1,6 +1,7 @@
 package com.example.myexaminationapplication
 
 import android.animation.Animator
+import android.content.Intent
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -35,6 +36,11 @@ class ActivityWinPage : AppCompatActivity() {
         }
         moveObjectDown()
 
+        val scoreButton = findViewById<Button>(R.id.scoreButton)
+        scoreButton.setOnClickListener {
+            val intent = Intent(this, HighscoreActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 
