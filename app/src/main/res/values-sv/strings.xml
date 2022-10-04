@@ -9,4 +9,5 @@
     <string name="bonusTextView">Bonus: Samma kort värde = x2 Poäng</string>
     <string name="buttonPressLow">Lägre</string>
     <string name="buttonPressHigh">Högre</string>
+    <string name="HigscoreTextView">Poänglista</string>
 </resources>

@@ -18,7 +18,8 @@ class HighscoreActivity : AppCompatActivity() {
 
         val buttonSaver = findViewById<Button>(R.id.saveButton)
         val loadButton = findViewById<Button>(R.id.loadBtn)
-        findViewById<EditText>(R.id.editTextUsername)
+        editTextUsername = findViewById(R.id.editTextUsername)
+        listTextView = findViewById(R.id.listTextView)
 
 
         buttonSaver.setOnClickListener {

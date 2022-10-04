@@ -8,4 +8,5 @@
     <string name="bonusTextView">Bonus: Same card = x2 Score</string>
     <string name="buttonPressLow">Low</string>
     <string name="buttonPressHigh">High</string>
+    <string name="HigscoreTextView">High score</string>
 </resources>
