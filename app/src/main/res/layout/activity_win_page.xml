@@ -11,23 +11,14 @@
         android:id="@+id/textViewWin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
         android:text="@string/textViewWin"
         android:textColor="#000000"
         android:textSize="65sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonBack"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.903" />
-
-    <Button
-        android:id="@+id/buttonBack"
-        android:textColor="#100c08"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/scoreButton"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintVertical_bias="0.576" />
 
     <ImageView
         android:id="@+id/fallingCardOne"
@@ -57,9 +48,9 @@
         android:id="@+id/fallingCardThree"
         android:layout_width="64dp"
         android:layout_height="83dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="288dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintHorizontal_bias="0.631"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/diamondoface" />
@@ -112,14 +103,34 @@
         android:id="@+id/scoreButton"
         android:layout_width="180dp"
         android:layout_height="56dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="50dp"
         android:backgroundTint="#cc6666"
         android:text="Highscore"
         android:textColor="#100c08"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewWin" />
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toEndOf="@+id/backButton"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWin"
+        app:layout_constraintVertical_bias="0.379" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="151dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#cc6666"
+        android:text="Go Back"
+        android:textColor="#100c08"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWin"
+        app:layout_constraintVertical_bias="0.379" />
 </androidx.constraintlayout.widget.ConstraintLayout>

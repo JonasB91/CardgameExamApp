@@ -30,7 +30,7 @@ class ActivityWinPage : AppCompatActivity() {
         fallingCardSix = findViewById(R.id.fallingCardSix)
         fallingCardSeven = findViewById(R.id.fallingCardSeven)
 
-        val backButton = findViewById<Button>(R.id.buttonBack)
+        val backButton = findViewById<Button>(R.id.backButton)
         backButton.setOnClickListener {
             finish()
         }
